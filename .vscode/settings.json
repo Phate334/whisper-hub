@@ -1,0 +1,28 @@
+{
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "[markdown]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.markdownlint": "explicit"
+        },
+    },
+    "markdownlint.config": {
+        "default": true,
+        "MD007": {
+            "indent": 4
+        }
+    }
+}
