@@ -3,13 +3,17 @@ name = "whisper-hub"
 version = "0.1.0"
 description = "transcript and translate"
 authors = ["Phate334 <phate334@gmail.com>"]
-license = "Apache License 2.0"
+license = "Apache-2.0"
 readme = "README.md"
 packages = [{include = "whisperhub"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 fastapi = "^0.108.0"
+uvicorn = {extras = ["standard"], version = "^0.25.0"}
+loguru = "^0.7.2"
+pydantic-settings = "^2.1.0"
+asyncpg = "^0.29.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.3.0"
@@ -62,3 +66,6 @@ disable = [
   "C0115", # missing-class-docstring
   "C0116", # missing-function-docstring
 ]
+
+[tool.poetry.scripts]
+app = "uvicorn whisperhub.main:app --reload"

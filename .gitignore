@@ -163,3 +163,4 @@ cython_debug/
 wheelhouse/
 test_models/
 *.ipynb
+*.db
