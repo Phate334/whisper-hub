@@ -43,3 +43,9 @@ def get_application() -> FastAPI:
 
 
 app = get_application()
+
+
+def run():
+    import uvicorn
+
+    uvicorn.run("whisperhub.main:app", reload=True)
